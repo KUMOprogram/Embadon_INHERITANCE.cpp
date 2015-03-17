@@ -9,7 +9,7 @@ class Square
 	public:
 		float base;
 		string shape;
-  	Square(const string& xshape = "", const float& xbase = 0);
+  		Square(const string& xshape = "", const float& xbase = 0);
 		float getbase() const;
 		string getshape() const;
 		void setbase(const float& xbase = 0);
@@ -52,11 +52,11 @@ float Square::embadon()
 class Rectangular:public Square
 {
     public:
-		float height;
+	float height;
   	Rectangular(const float& xheight = 0);
-		float getheight() const;
-		void setheight(const float& xheight = 0);
-		float embadon();
+	float getheight() const;
+	void setheight(const float& xheight = 0);
+	float embadon();
 };
 
 Rectangular::Rectangular(const float& xheight)
@@ -84,7 +84,7 @@ class Triangle:public Rectangular
 {
     public:
   	Triangle();
-		float embadon();
+	float embadon();
 };
 
 Triangle::Triangle()
@@ -100,11 +100,11 @@ float Triangle::embadon()
 class Trapeze:public Rectangular
 {
     public:
-      float longbase;
-  		Trapeze(const float& xlongbase = 0);
-  		float getlongbase() const;
-  		void setlongbase(const float& xlongbase);
-		  float embadon();
+      	float longbase;
+  	Trapeze(const float& xlongbase = 0);
+  	float getlongbase() const;
+  	void setlongbase(const float& xlongbase);
+	float embadon();
 };
 
 Trapeze::Trapeze(const float& xlongbase)
@@ -142,29 +142,29 @@ int main()
     while(true)
     {
         
-        menu();
+        	    menu();
 		    int choice;
 		    cin>>choice;
 		    cout<<" ************************************* "<<endl;
 
 		    if (choice==1)
 		    {
-			    final+=shape1();
+			final+=shape1();
 		    }
 
 		    if (choice==2)
 		    {
-        	final+=shape2();
+        		final+=shape2();
 		    }
 
 		    if (choice==3)
 		    {
-        	final+=shape3();
+        		final+=shape3();
 		    }
 
 		    if (choice==4)
 		    {
-        	final+=shape4();
+        		final+=shape4();
 		    }
 
 		    if (choice==0)
@@ -174,14 +174,14 @@ int main()
 
 		    if ((choice!=1)&&(choice!=2)&&(choice!=3)&&(choice!=4)&&(choice!=0))
 		    {
-			    cout<<" ERROR: Invalid Choice"<<endl<<endl;
+			cout<<" ERROR: Invalid Choice"<<endl<<endl;
 		    }else{
-        	cout<<" *************************************"<<endl;
-			    cout<<"        SUNOLIKO EMBADON: "<<final<<endl;
-			    cout<<" *************************************"<<endl;
-    		}
+        		cout<<" *************************************"<<endl;
+			cout<<"        SUNOLIKO EMBADON: "<<final<<endl;
+			cout<<" *************************************"<<endl;
+    		    }
 		
-		system("pause");
+	system("pause");
     }
 }
 
@@ -209,7 +209,7 @@ float shape1()
 	cin>>base;
 	newshape.setbase(base);
 
-  cout<<" ------------------------------------- "<<endl;
+  	cout<<" ------------------------------------- "<<endl;
 	cout<<" Embadon Square: "<<newshape.embadon()<<endl<<endl;
 	
 	return newshape.embadon();
@@ -227,12 +227,12 @@ float shape2()
 	cin>>base;
 	newshape.setbase(base);
 
-  float height;
+  	float height;
 	cout<<" Height: ";
 	cin>>height;
 	newshape.setheight(height);
 
-  cout<<" ------------------------------------- "<<endl;
+  	cout<<" ------------------------------------- "<<endl;
 	cout<<" Embadon Rectangule: "<<newshape.embadon()<<endl<<endl;
 
 	return newshape.embadon();
@@ -250,12 +250,12 @@ float shape3()
 	cin>>base;
 	newshape.setbase(base);
 
-  float height;
+  	float height;
 	cout<<" Height: ";
 	cin>>height;
 	newshape.setheight(height);
 
-  cout<<" ------------------------------------- "<<endl;
+  	cout<<" ------------------------------------- "<<endl;
 	cout<<" Embadon Triangle: "<<newshape.embadon()<<endl<<endl;
 
 	return newshape.embadon();
@@ -278,12 +278,12 @@ float shape4()
 	cin>>longbase;
 	newshape.setlongbase(longbase);
 
-  float height;
+  	float height;
 	cout<<" Height: ";
 	cin>>height;
 	newshape.setheight(height);
 
-  cout<<" ------------------------------------- "<<endl;
+  	cout<<" ------------------------------------- "<<endl;
 	cout<<" Embadon Trapeze: "<<newshape.embadon()<<endl<<endl;
 
 	return newshape.embadon();
